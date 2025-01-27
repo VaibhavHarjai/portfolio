@@ -1,0 +1,165 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; /* Lighter background */
+  color: #444; /* Darker text color */
+  line-height: 1.6;
+}
+
+header {
+  background-color: #3b6cc2; /* Blue header */
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  transition: padding-top 0.5s ease-out; /* Transition for navbar position */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative; /* To allow the underline effect */
+  padding-bottom: 2px; /* Space for the underline */
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white; /* Underline color */
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out; /* Smooth transition */
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Active link style */
+nav ul li a.active {
+  color: #00f7ff; /* Highlight color for the active link */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+#home {
+  text-align: center;
+  background-color: #e1f5fe; /* Light blue background */
+  padding: 2rem 0;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #3b6cc2; /* Blue border */
+  margin: 1rem 0;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  margin-top: 1.5rem;
+  background-color: #3b6cc2; /* Blue button */
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-download:hover {
+  background-color: #2a5da2; /* Darker blue */
+}
+
+#projects .project {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+#projects h3 {
+  margin-top: 0;
+  color: #3b6cc2; /* Blue headings */
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#contact input, #contact textarea {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contact button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #3b6cc2; /* Blue button */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #2a5da2; /* Darker blue */
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* New animation for navbar movement */
+nav ul li a.active {
+  color: #00f7ff;
+  font-weight: bold;
+  text-decoration: underline;
+}

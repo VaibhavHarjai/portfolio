@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" id="home-link">Home</a></li>
+                <li><a href="#projects" id="projects-link">Projects</a></li>
+                <li><a href="#contact" id="contact-link">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <img src="image/portfolio img.jpg" alt="Profile Picture" class="profile-pic">
+        <p>Hello ! I'm Vaibhav Harjai, a passionate Python Programmer. Check out my projects and feel free to reach out!</p>
+        <a href="resume vaibhav.pdf" class="btn-download" download>Download My Resume</a>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <img src="image/rock,paper,scissors.jpg" alt="Project 1" class="project-img">
+            <h3>Rock, Paper, Scissors Game</h3>
+            <p> Rock Paper Scissors Game (Python): This is a simple console-based game developed in Python, where the user plays against the computer. The game allows the player to choose Rock, Paper, or Scissors, and the computer makes a random choice. The program then evaluates the winner based on the game rules. It uses Python's random library to generate the computer's choice.</p>
+        </div>
+        <div class="project">
+            <img src="image/random password generator.png" alt="Project 2" class="project-img">
+            <h3>Random Password Generator</h3>
+            <p> Random Password Generator (Python): A Python program that generates a secure and random password for the user. The program allows customization of password length and can include uppercase letters, lowercase letters, numbers, and special characters. The random password is generated using Python’s random and string modules, ensuring unpredictability and security.</p>
+        </div>
+        <div class="project">
+            <img src="image/calculator.webp" alt="Project 3" class="project-img">
+            <h3>Basic Calculator</h3>
+            <p> Basic Calculator (Python & Tkinter): This is a simple GUI-based calculator built using Python and the Tkinter library. It supports basic arithmetic operations like addition, subtraction, multiplication, and division. The calculator features buttons for digits and operators, and it uses Tkinter’s widget-based interface to create a user-friendly environment for performing calculations.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/mlddokga" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vaibhav Harjai. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // JavaScript to handle active class for the clicked link and push navbar down
+      const links = document.querySelectorAll('nav ul li a');
+      const header = document.querySelector('header');
+  
+      links.forEach(link => {
+          link.addEventListener('click', () => {
+              // Remove the 'active' class from all links
+              links.forEach(item => item.classList.remove('active'));
+  
+              // Add 'active' class to the clicked link
+              link.classList.add('active');
+  
+              // Move the navbar down
+              header.classList.add('moved');
+              
+              // Optionally, reset the navbar position after 2 seconds (adjust as needed)
+              setTimeout(() => {
+                  header.classList.remove('moved');
+              }, 2000); // Reset after 2 seconds (2000ms)
+          });
+      });
+  </script>
+  
